@@ -2,7 +2,7 @@ CC=gcc
 
 main: main.o add.o sub.o
 	$(CC) -o main main.o add.o sub.o
-	ar crv libarith.a add.o sub.o
+	$(CC) -o libarith.so -fPIC -shared add.o sub.o
 
 main.o: main.c
 	$(CC) -c -o main.o main.c
