@@ -36,8 +36,8 @@
 - Address Space
 - Libraries
 
-  - Static
-  - Dynamic
+  - Static (.a) => ar
+  - Dynamic (.so) => gcc
 
 - Program sections
 

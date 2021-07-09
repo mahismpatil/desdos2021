@@ -1,4 +1,4 @@
-CC=gcc
+CC=gcc -m32 -g
 
 main: main.o add.o sub.o
 	$(CC) -o main main.o add.o sub.o
