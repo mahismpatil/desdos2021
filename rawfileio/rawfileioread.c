@@ -22,6 +22,8 @@ int main(int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
 
+    printf("File descriptor: %d\n", fd);
+
     count = read(fd, buff, BUFF_SIZE);
     printf("Read data from file: %s\n", buff);
     printf("Read data %d bytes from file\n", count);
