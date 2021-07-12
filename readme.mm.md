@@ -47,12 +47,6 @@
   - heap
   - stack
 
-- Stack related concepts
-
-  - stack
-  - stack pointer
-  - stack frame
-
 - Address Space
 
   - Kernel Space
@@ -60,6 +54,19 @@
 
 - Library Calls
 - System Calls
+
+  - open, read, write, close
+  - file descriptor
+  - stdin, stdout, stderr
+
+- Stack related concepts
+
+  - stack
+  - stack pointer
+  - stack frame
+
+- fork
+- pipes
 
 - Program vs Process
 - Multi User
