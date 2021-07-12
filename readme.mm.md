@@ -56,6 +56,8 @@
 - System Calls
 
   - open, read, write, close
+  - ^ Assignment: Use read system call
+  - ^ Assignment: Write your own copy utility using system calls
   - file descriptor
   - stdin, stdout, stderr
 
