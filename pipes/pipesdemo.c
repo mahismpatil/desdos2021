@@ -13,9 +13,9 @@ int main(int argc, char const *argv[])
     int pfdr[2];
     pid_t id;
 
+    id = fork();
     pipe(pfd);
     pipe(pfdr);
-    id = fork();
 
     if (0 == id)
     {

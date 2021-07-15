@@ -99,6 +99,12 @@
 - Monolithic and Micro Kernels
 - User space and Kernel Space
 - Library and System calls
+
+IPC
+
+- Pipes
+- FIFOs (named pipes)
+
 - Blocking call and Non-blocking calls
 
 - CPU (GPR, PC, SP, Flags) => Context
