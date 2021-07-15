@@ -71,7 +71,15 @@
   - stack frame
 
 - fork
+  - Zombie
+  - Orphan
 - pipes
+
+- Context
+
+  - PC, GPR, Flags, SP
+  - Context Switch => Context Saving and Context Restoring
+  - P1 => CS(P1) => Sched (chosen P2) => CR(P2) => P2
 
 - Program vs Process
 - Multi User
