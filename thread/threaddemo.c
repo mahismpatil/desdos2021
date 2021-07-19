@@ -18,8 +18,8 @@ int main(int argc, char const *argv[])
     baudrate2 = 115200;
     pthread_create(&uart2_tid, NULL, uart_init, &baudrate2);
     printf("After thread creation\n");
-    pthread_join(uart1_tid, NULL);
     pthread_join(uart2_tid, NULL);
+    pthread_join(uart1_tid, NULL);
     printf("Thread joined\n");
     return 0;
 }

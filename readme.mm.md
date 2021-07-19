@@ -136,6 +136,8 @@ IPC
 - IPC and Synchronization
 - Pipes
 - FIFO
+- POSIX Threads
+
 - Exec
 - Race conditions
 - Critical Sections
