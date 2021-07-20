@@ -149,3 +149,19 @@ IPC
 - Conditional Variables
 - Shared memory
 - Message Queues
+
+* Write a library to provide the following functionality on a RPI:
+  - Turn ON or OFF a LED connected to pin 23 of RPI
+  - Read digital data from a switch connected to pin 25 of RPI
+  - Get distance from a connected Ultrasonic module
+  - Get temperature and humidity through the connected sensor module
+  - Control a relay
+  - Turn on a Buzzer
+  - Detect presence of magnetic field
+  - Get air quality
+  - Get presence of specific gas
+  - Wait for a vibration or knock
+  - Get presence of light or darkness
+  - Get sound presence in the vicinity
+
+Use the lgpio library
