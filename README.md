@@ -1,5 +1,6 @@
 - 2 and 3 Layer Embedded Systems
 - Toolchain
+  - Compiler, Linker, Debuggers, Binary Utilities (objdump, objcopy)
   - Native (eg. gcc)
   - Cross (eg. arm-none-eabi-gcc)
 - ELF (Intermediate object/ binaries/ executables)
@@ -11,11 +12,17 @@
   - ^ definitions preferably => c file
 - Embedded Systems
 
-  - CPU
-  - IO
-  - Memory
+  - CPU - Process Management
+  - IO - IO Management including DD
+  - Memory - Memory Management
 
-- Git
+- Process Management
+
+  - Created Process (fork)
+  - IPC (pipes, fifos, mq, shared mem)
+  - Sync (sem, mutex)
+
+- Git (version control system)
 
   - git init
   - git add .
@@ -55,6 +62,11 @@
 - Library Calls
 - System Calls
 
+  - specific to platform
+
+    - UNIX - SCI (Unices)
+    - Windows - SCI
+
   - open, read, write, close
   - ^ Assignment: Use read system call
   - ^ Assignment: Write your own copy utility using system calls
@@ -69,10 +81,15 @@
   - stack
   - stack pointer
   - stack frame
+    - calls function - create
+    - return function - delete
+    - return address
+    - arg and local variables stored stack frame
 
 - fork
   - Zombie
   - Orphan
+  - related processes (parent <-> child)
 - pipes
 
 - Context
@@ -80,6 +97,16 @@
   - PC, GPR, Flags, SP
   - Context Switch => Context Saving and Context Restoring
   - P1 => CS(P1) => Sched (chosen P2) => CR(P2) => P2
+
+- RR - Quantum time
+
+  - 100ms (P1 -> 100ms -> P2 -> 100ms)
+  - Define -
+  - Embedded Linux - 100ms -> 80ms -> 120ms
+
+- CPU governors
+
+- ARM -> Banked Registers
 
 - Program vs Process
 - Multi User
@@ -95,6 +122,8 @@
 - PCB
 
 - PID and Parent ID
+
+- init process / systemd
 
 - Monolithic and Micro Kernels
 - User space and Kernel Space
@@ -130,6 +159,9 @@ IPC
   - Running
   - Waiting
   - Terminate
+- | 10ms | 10ms |
+  | P1 | P2 |
+  |------>|------>|
 - fork
 - COW
 
@@ -139,6 +171,10 @@ IPC
 - POSIX Threads
 
 - Exec
+- Resource -> used process
+  - variable, struct, io port, register, printer
+- Shared Resource
+  - eg. UART
 - Race conditions
 - Critical Sections
 - Mutual Exclusion
