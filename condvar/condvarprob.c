@@ -3,7 +3,6 @@
 
 int event = 0;
 pthread_mutex_t eventMutex;
-pthread_cond_t eventCV;
 
 void *check_event(void *data)
 {
@@ -12,7 +11,6 @@ void *check_event(void *data)
     printf("CE: Checking event\n");
     while (event != 1)
     {
-        pthread_cond_wait(&eventCV, &eventMutex);
     }
     printf("CE: Event is set\n");
     pthread_mutex_unlock(&eventMutex);
@@ -27,14 +25,12 @@ void *fire_event(void *data)
     event = 1;
     pthread_mutex_unlock(&eventMutex);
     printf("FE: Unlocking the mutex\n");
-    pthread_cond_signal(&eventCV);
-    printf("FE: Signaling\n");
 }
 
 int main(int argc, char const *argv[])
 {
     pthread_t cid, fid;
-    pthread_cond_init(&eventCV, NULL);
+    // pthread_cond_init(&eventCV, NULL);
     pthread_create(&cid, NULL, check_event, NULL);
     pthread_create(&fid, NULL, fire_event, NULL);
     pthread_join(cid, NULL);
